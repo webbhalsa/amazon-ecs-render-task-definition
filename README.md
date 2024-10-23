@@ -12,6 +12,7 @@ Inserts a container image URI into an Amazon ECS task definition JSON file, crea
 
 <!-- tocstop -->
 
+
 ## Usage
 If task definition file is provided that has precedence over any other option to fetch task definition. 
 If both task definition file and task definition arn are provided, a warning that both have been provided will be returned and the task definition file will be used.
