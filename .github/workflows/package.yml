@@ -27,7 +27,6 @@ jobs:
           npm test
           npm run package
       - name: Commit to PR
-        if: github.actor == 'dependabot[bot]'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -36,6 +35,5 @@ jobs:
           git commit -m "chore: Update dist" || echo "No changes to commit"
           git push
       - name: Check git diff
-        if: github.actor != 'dependabot[bot]'
         run: |
           git diff --exit-code dist/index.js
